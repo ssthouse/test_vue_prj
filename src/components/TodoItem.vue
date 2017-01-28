@@ -1,6 +1,9 @@
 <template>
-  <div id="todo-item">
-    <li>{{ todo.text }}</li>
+  <div>
+    <li>
+      {{title}}
+      <button v-on:click="$emit('remove')">X</button>
+    </li>
   </div>
 </template>
 
@@ -10,10 +13,9 @@
     data () {
       return {}
     },
-    props: ['todo']
+    props: ['title']
   }
+
 </script>
 
-<style>
-
-</style>
+<style></style>

@@ -22,13 +22,6 @@
     <p>{{input_model}}</p>
     <br>
 
-    <p>测试导入子模块</p>
-    <ol>
-      <todo-item v-for="item in itemList" v-bind:todo="item"></todo-item>
-    </ol>
-    <br>
-
-
     <p>原始数据</p>
     <h2>Essential Links</h2>
     <ul>
@@ -50,8 +43,6 @@
 </template>
 
 <script>
-  import TodoItem from './TodoItem'
-
   export default {
     name: 'hello',
     data () {
@@ -77,9 +68,6 @@
       reverseMessage: function () {
         this.msg_to_reverse = this.msg_to_reverse.split(' ').reverse().join('     ` ')
       }
-    },
-    components: {
-      TodoItem
     }
   }
 </script>

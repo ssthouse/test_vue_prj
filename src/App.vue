@@ -3,22 +3,25 @@
     <p> {{title}}</p>
     <img src="./assets/logo.png">
     <hello></hello>
-    <br>
+    <br><br>
 
     <p>Test once.vue</p>
     <once></once>
-    <br>
+    <br><br>
 
     <p>Test Computed.vue</p>
     <computed></computed>
-    <br>
+    <br><br>
 
     <p>Test Watcher.vue</p>
     <p>Fail to use external js file ===> fix it latter!</p>
     <!--<watcher></watcher>-->
-    <br>
+    <br><br>
 
     <if-else></if-else>
+    <br><br>
+
+    <todo-list></todo-list>
   </div>
 </template>
 
@@ -27,6 +30,7 @@
   import Once from './components/Once'
   import Computed from './components/Computed'
   import IfElse from './components/IfElse.vue'
+  import TodoList from './components/TodoList.vue'
   //  import Watcher from './components/Watcher'
 
   export default {
@@ -37,7 +41,7 @@
       }
     },
     components: {
-      Hello, Once, Computed, 'if-else': IfElse
+      'hello': Hello, 'once': Once, 'computed': Computed, 'if-else': IfElse, 'todo-list': TodoList
     }
   }
 </script>
