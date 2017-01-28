@@ -1,16 +1,14 @@
 <template>
-  <li>{{ todo.text }} </li>
+  <div id="todo-item">
+    <li>{{ todo.text }}</li>
+  </div>
 </template>
 
 <script>
   export default{
     name: 'todo-item',
     data () {
-      // The todo-item component now accepts a
-      // "prop", which is like a custom attribute.
-      // This prop is called todo.
-      return {
-      }
+      return {}
     },
     props: ['todo']
   }

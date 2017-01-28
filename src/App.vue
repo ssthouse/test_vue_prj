@@ -14,7 +14,8 @@
     <br>
 
     <p>Test Watcher.vue</p>
-    <watcher></watcher>
+    <p>Fail to use external js file ===> fix it latter!</p>
+    <!--<watcher></watcher>-->
   </div>
 </template>
 
@@ -22,7 +23,7 @@
   import Hello from './components/Hello'
   import Once from './components/Once'
   import Computed from './components/Computed'
-  import Watcher from './components/Watcher'
+  //  import Watcher from './components/Watcher'
 
   export default {
     name: 'app',
@@ -32,7 +33,7 @@
       }
     },
     components: {
-      Hello, Once, Computed, Watcher
+      Hello, Once, Computed
     }
   }
 </script>
