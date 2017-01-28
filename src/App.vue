@@ -11,6 +11,10 @@
 
     <p>Test Computed.vue</p>
     <computed></computed>
+    <br>
+
+    <p>Test Watcher.vue</p>
+    <watcher></watcher>
   </div>
 </template>
 
@@ -18,6 +22,7 @@
   import Hello from './components/Hello'
   import Once from './components/Once'
   import Computed from './components/Computed'
+  import Watcher from './components/Watcher'
 
   export default {
     name: 'app',
@@ -27,7 +32,7 @@
       }
     },
     components: {
-      Hello, Once, Computed
+      Hello, Once, Computed, Watcher
     }
   }
 </script>
