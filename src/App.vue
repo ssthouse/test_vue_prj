@@ -3,15 +3,16 @@
     <p> {{title}}</p>
     <img src="./assets/logo.png">
     <hello></hello>
-    <!-- 测试模块 -->
-    下面是测试模块title
-    <test></test>
+    <br>
+
+    <p>Test once.vue</p>
+    <once></once>
   </div>
 </template>
 
 <script>
   import Hello from './components/Hello'
-  import Test from './components/Test'
+  import Once from './components/Once.vue'
 
   export default {
     name: 'app',
@@ -21,7 +22,7 @@
       }
     },
     components: {
-      Test, Hello
+      Hello, Once
     }
   }
 </script>

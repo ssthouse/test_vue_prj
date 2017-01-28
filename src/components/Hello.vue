@@ -8,16 +8,28 @@
         {{todo.text}}
       </li>
     </ol>
+    <br>
+
     <p>测试点击事件绑定</p>
     <p>{{msg_to_reverse}}</p>
     <button v-on:click="reverseMessage">
       Reverse Message
     </button>
+    <br>
 
     <p>测试双向绑定</p>
     <input v-model="input_model">
     <p>{{input_model}}</p>
+    <br>
 
+    <p>测试导入子模块</p>
+    <ol>
+      <todo-item v-for="item in itemList" v-bind:todo="item"></todo-item>
+    </ol>
+    <br>
+
+
+    <p>原始数据</p>
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -38,6 +50,8 @@
 </template>
 
 <script>
+  import TodoItem from './TodoItem'
+
   export default {
     name: 'hello',
     data () {
@@ -51,13 +65,21 @@
           {text: 'Build something awesome'}
         ],
         msg_to_reverse: 'Hi ssthouse!',
-        input_model: 'this is the input model'
+        input_model: 'this is the input model',
+        itemList: [
+          {text: 'line one...'},
+          {text: 'line two...'},
+          {text: 'line three...'}
+        ]
       }
     },
     methods: {
       reverseMessage: function () {
         this.msg_to_reverse = this.msg_to_reverse.split(' ').reverse().join('     ` ')
       }
+    },
+    components: {
+      TodoItem
     }
   }
 </script>
