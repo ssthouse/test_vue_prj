@@ -7,12 +7,17 @@
 
     <p>Test once.vue</p>
     <once></once>
+    <br>
+
+    <p>Test Computed.vue</p>
+    <computed></computed>
   </div>
 </template>
 
 <script>
   import Hello from './components/Hello'
-  import Once from './components/Once.vue'
+  import Once from './components/Once'
+  import Computed from './components/Computed'
 
   export default {
     name: 'app',
@@ -22,7 +27,7 @@
       }
     },
     components: {
-      Hello, Once
+      Hello, Once, Computed
     }
   }
 </script>
