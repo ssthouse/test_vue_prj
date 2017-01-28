@@ -16,6 +16,9 @@
     <p>Test Watcher.vue</p>
     <p>Fail to use external js file ===> fix it latter!</p>
     <!--<watcher></watcher>-->
+    <br>
+
+    <if-else></if-else>
   </div>
 </template>
 
@@ -23,6 +26,7 @@
   import Hello from './components/Hello'
   import Once from './components/Once'
   import Computed from './components/Computed'
+  import IfElse from './components/IfElse.vue'
   //  import Watcher from './components/Watcher'
 
   export default {
@@ -33,7 +37,7 @@
       }
     },
     components: {
-      Hello, Once, Computed
+      Hello, Once, Computed, 'if-else': IfElse
     }
   }
 </script>
