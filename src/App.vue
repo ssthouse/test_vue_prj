@@ -22,16 +22,23 @@
     <br><br>
 
     <todo-list></todo-list>
+
+    <v-footer>Foot</v-footer>
+    <v-btn success flat>Try Vuetify Button</v-btn>
   </div>
 </template>
 
 <script>
+  import Vue from 'vue'
+  import Vuetify from 'vuetify'
   import Hello from './components/Hello'
   import Once from './components/Once'
   import Computed from './components/Computed'
   import IfElse from './components/IfElse.vue'
   import TodoList from './components/TodoList.vue'
   //  import Watcher from './components/Watcher'
+
+  Vue.use(Vuetify)
 
   export default {
     name: 'app',
@@ -42,6 +49,9 @@
     },
     components: {
       'hello': Hello, 'once': Once, 'computed': Computed, 'if-else': IfElse, 'todo-list': TodoList
+    },
+    mounted () {
+      this.$vuetify.init()
     }
   }
 </script>
