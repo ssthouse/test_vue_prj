@@ -22,23 +22,27 @@
     <br><br>
 
     <todo-list></todo-list>
+    <br><br>
 
-    <v-footer>Foot</v-footer>
-    <v-btn success flat>Try Vuetify Button</v-btn>
+    <el-button>Let's do this!</el-button>
+    <br><br>
+
+    <el-breadcrumb separator="/">
+      <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+      <el-breadcrumb-item>活动管理</el-breadcrumb-item>
+      <el-breadcrumb-item>活动列表</el-breadcrumb-item>
+      <el-breadcrumb-item>活动详情</el-breadcrumb-item>
+    </el-breadcrumb>
   </div>
 </template>
 
 <script>
-  import Vue from 'vue'
-  import Vuetify from 'vuetify'
   import Hello from './components/Hello'
   import Once from './components/Once'
   import Computed from './components/Computed'
   import IfElse from './components/IfElse.vue'
   import TodoList from './components/TodoList.vue'
   //  import Watcher from './components/Watcher'
-
-  Vue.use(Vuetify)
 
   export default {
     name: 'app',
