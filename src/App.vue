@@ -24,6 +24,7 @@
     <todo-list></todo-list>
     <br><br>
 
+    <p>测试饿了么控件</p>
     <el-button>Let's do this!</el-button>
     <br><br>
 
@@ -33,6 +34,12 @@
       <el-breadcrumb-item>活动列表</el-breadcrumb-item>
       <el-breadcrumb-item>活动详情</el-breadcrumb-item>
     </el-breadcrumb>
+    <br><br>
+
+    <checkbox-item></checkbox-item>
+    <br><br>
+
+    <select-item></select-item>
   </div>
 </template>
 
@@ -43,6 +50,8 @@
   import IfElse from './components/IfElse.vue'
   import TodoList from './components/TodoList.vue'
   //  import Watcher from './components/Watcher'
+  import CheckBox from './components/CheckBox.vue'
+  import Select from './components/Select.vue'
 
   export default {
     name: 'app',
@@ -52,7 +61,13 @@
       }
     },
     components: {
-      'hello': Hello, 'once': Once, 'computed': Computed, 'if-else': IfElse, 'todo-list': TodoList
+      'hello': Hello,
+      'once': Once,
+      'computed': Computed,
+      'if-else': IfElse,
+      'todo-list': TodoList,
+      'checkbox-item': CheckBox,
+      'select-item': Select
     },
     mounted () {
       this.$vuetify.init()
