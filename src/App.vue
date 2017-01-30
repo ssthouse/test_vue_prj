@@ -40,6 +40,14 @@
     <br><br>
 
     <select-item></select-item>
+    <br><br>
+
+    <label>静态 props</label>
+    <props-item message="hahaha" id="props_item_static"></props-item>
+    <label>动态 props</label>
+    <props-item v-bind:message="props_message"></props-item>
+    <input v-model="props_message">
+    <br><br>
   </div>
 </template>
 
@@ -52,12 +60,14 @@
   //  import Watcher from './components/Watcher'
   import CheckBox from './components/CheckBox.vue'
   import Select from './components/Select.vue'
+  import Props from './components/Props.vue'
 
   export default {
     name: 'app',
     data () {
       return {
-        title: 'hahaha'
+        title: 'hahaha',
+        props_message: 'I am the props message'
       }
     },
     components: {
@@ -67,7 +77,8 @@
       'if-else': IfElse,
       'todo-list': TodoList,
       'checkbox-item': CheckBox,
-      'select-item': Select
+      'select-item': Select,
+      'props-item': Props
     },
     mounted () {
       this.$vuetify.init()
