@@ -48,6 +48,10 @@
     <props-item v-bind:message="props_message"></props-item>
     <input v-model="props_message">
     <br><br>
+
+    <emit-event-item v-on:click-el-button="increase_total_num"></emit-event-item>
+    <emit-event-item v-on:click-el-button="increase_total_num"></emit-event-item>
+    <p>{{totalNum}}</p>
   </div>
 </template>
 
@@ -61,13 +65,20 @@
   import CheckBox from './components/CheckBox.vue'
   import Select from './components/Select.vue'
   import Props from './components/Props.vue'
+  import EmitEvent from './components/EmitEvent.vue'
 
   export default {
     name: 'app',
     data () {
       return {
         title: 'hahaha',
-        props_message: 'I am the props message'
+        props_message: 'I am the props message',
+        totalNum: 0
+      }
+    },
+    methods: {
+      increase_total_num: function () {
+        this.totalNum += 1
       }
     },
     components: {
@@ -78,10 +89,8 @@
       'todo-list': TodoList,
       'checkbox-item': CheckBox,
       'select-item': Select,
-      'props-item': Props
-    },
-    mounted () {
-      this.$vuetify.init()
+      'props-item': Props,
+      'emit-event-item': EmitEvent
     }
   }
 </script>
