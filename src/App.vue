@@ -55,6 +55,9 @@
     <br><br>
 
     <transition-item></transition-item>
+    <br><br><br><br>
+
+    <dynamic-component></dynamic-component>
   </div>
 </template>
 
@@ -70,6 +73,7 @@
   import Props from './components/Props.vue'
   import EmitEvent from './components/EmitEvent.vue'
   import Transation from './components/Transition.vue'
+  import DynamicComponent from './components/DynamicComponent.vue'
 
   export default {
     name: 'app',
@@ -95,7 +99,8 @@
       'select-item': Select,
       'props-item': Props,
       'emit-event-item': EmitEvent,
-      'transition-item': Transation
+      'transition-item': Transation,
+      'dynamic-component': DynamicComponent
     }
   }
 </script>

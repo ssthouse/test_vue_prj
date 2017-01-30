@@ -1,7 +1,8 @@
 <template>
   <div>
-    <transition name="fade">
+    <transition name="fade" >
       <p v-if="isTrue">有动画效果吗?</p>
+      <p v-else>有的~!</p>
     </transition>
     <el-button v-on:click="changeBoolean">change boolean</el-button>
     <br><br>
