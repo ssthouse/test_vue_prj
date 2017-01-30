@@ -58,6 +58,9 @@
     <br><br><br><br>
 
     <dynamic-component></dynamic-component>
+    <br><br><br><br>
+
+    <mix-usage></mix-usage>
   </div>
 </template>
 
@@ -74,6 +77,7 @@
   import EmitEvent from './components/EmitEvent.vue'
   import Transation from './components/Transition.vue'
   import DynamicComponent from './components/DynamicComponent.vue'
+  import MixUsage from './components/MixUsage.vue'
 
   export default {
     name: 'app',
@@ -100,7 +104,8 @@
       'props-item': Props,
       'emit-event-item': EmitEvent,
       'transition-item': Transation,
-      'dynamic-component': DynamicComponent
+      'dynamic-component': DynamicComponent,
+      'mix-usage': MixUsage
     }
   }
 </script>
