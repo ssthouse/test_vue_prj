@@ -47,11 +47,14 @@
     <label>动态 props</label>
     <props-item v-bind:message="props_message"></props-item>
     <input v-model="props_message">
-    <br><br>
+    <br><br><br><br>
 
     <emit-event-item v-on:click-el-button="increase_total_num"></emit-event-item>
     <emit-event-item v-on:click-el-button="increase_total_num"></emit-event-item>
     <p>{{totalNum}}</p>
+    <br><br>
+
+    <transition-item></transition-item>
   </div>
 </template>
 
@@ -66,6 +69,7 @@
   import Select from './components/Select.vue'
   import Props from './components/Props.vue'
   import EmitEvent from './components/EmitEvent.vue'
+  import Transation from './components/Transition.vue'
 
   export default {
     name: 'app',
@@ -90,7 +94,8 @@
       'checkbox-item': CheckBox,
       'select-item': Select,
       'props-item': Props,
-      'emit-event-item': EmitEvent
+      'emit-event-item': EmitEvent,
+      'transition-item': Transation
     }
   }
 </script>
