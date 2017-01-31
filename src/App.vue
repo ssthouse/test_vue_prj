@@ -61,6 +61,20 @@
     <br><br><br><br>
 
     <mix-usage></mix-usage>
+    <br><br><br><br>
+
+    <!--匹配路由的组件将显示在这里-->
+    <router-link :to="to_item_str">To item /</router-link>
+    <input v-model="to_item_str">
+    <router-link to="/main/ssthouse">To item /main</router-link>
+    <router-link to="/main/ssthouse/item_one">To item one</router-link>
+    <router-link to="/main/ssthouse/item_two">To item two</router-link>
+    <!--用来承载父组件-->
+    <router-view></router-view>
+    <!--<router-item></router-item>-->
+    <br><br><br><br>
+
+    <get-data-item></get-data-item>
   </div>
 </template>
 
@@ -78,12 +92,15 @@
   import Transation from './components/Transition.vue'
   import DynamicComponent from './components/DynamicComponent.vue'
   import MixUsage from './components/MixUsage.vue'
+  import MainRouter from './router/MainRouter.vue'
+  import GetDataItem from './Resource/GetJavaRes.vue'
 
   export default {
     name: 'app',
     data () {
       return {
         title: 'hahaha',
+        to_item_str: '/',
         props_message: 'I am the props message',
         totalNum: 0
       }
@@ -105,7 +122,9 @@
       'emit-event-item': EmitEvent,
       'transition-item': Transation,
       'dynamic-component': DynamicComponent,
-      'mix-usage': MixUsage
+      'mix-usage': MixUsage,
+      'router-item': MainRouter,
+      'get-data-item': GetDataItem
     }
   }
 </script>
